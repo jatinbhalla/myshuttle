@@ -1,0 +1,9 @@
+FROM sachinraj/vstsdemos
+MAINTAINER Sachin Hridayraj
+RUN pwd
+RUN apt-get install libmysql-java
+RUN export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar
+ADD ./target/myshuttledev.war /home/sachin/myshuttledev.war
+ADD ./target/myshuttledev.war /usr/local/tomcat/webapps/myshuttledev.war
+RUN service mysql start
+EXPOSE 8080
