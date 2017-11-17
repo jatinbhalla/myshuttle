@@ -39,9 +39,7 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("/loginFail.jsp").forward(request, response);
         }
     }
-    public void vatsa(){
-        
-    }
+
 }
 
 
