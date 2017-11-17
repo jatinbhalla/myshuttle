@@ -14,12 +14,12 @@ public class UITest {
   // private String baseUrl=System.getProperty("webdriver.base.url");
   WebDriver driver = null;
   
-  @Before
+  //@Before
   public void crankUpDriver() {
     driver = new FirefoxDriver();
   }
   
-  @Test
+  //@Test
   public void getHomePage() {
     driver.get(baseUrl + "/");
     
@@ -28,7 +28,7 @@ public class UITest {
       "MyShuttle Login", title);
   }
   
-  @Test
+  //@Test
   public void loginToTheSite() {
     driver.get(baseUrl + "/");
     
@@ -43,7 +43,7 @@ public class UITest {
       "Dashboard", title);
   }
   
-  @Test
+  //@Test
   public void viewFares() {
     driver.get(baseUrl + "/");
 
@@ -66,7 +66,7 @@ public class UITest {
     // Home
   }
   
-  @After
+  //@After
   public void shutdownTheDriver() {
     driver.quit();
     driver = null;
