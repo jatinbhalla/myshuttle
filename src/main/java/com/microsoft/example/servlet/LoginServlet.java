@@ -39,11 +39,11 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("/loginFail.jsp").forward(request, response);
         }
     }
-}
-public class srivatsa{
     public void vatsa(){
         
     }
 }
+
+
 
 
