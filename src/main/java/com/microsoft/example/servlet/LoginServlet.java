@@ -1,5 +1,6 @@
 package com.microsoft.example.servlet;
 
+import java.io.Serializable;
 import java.io.PrintWriter;
 import java.io.IOException;
 import java.util.List;
