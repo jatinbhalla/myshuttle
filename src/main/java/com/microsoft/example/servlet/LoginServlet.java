@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
             
             // Fetch all the fares for that employee while we're here
             List<Fare> fareList = DataAccess.employeeFares(employee);
-            session.setAttribute("employeeList", fareList);
+            session.setAttribute("employeeList", (Serializable)fareList);
             
             float getTotalFareforDriver = DataAccess.getFareTotal(employee.getID());
             session.setAttribute("fareTotal",getTotalFareforDriver);
