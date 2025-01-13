@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
       - dev
       - uat      
     # paths:
@@ -13,11 +13,11 @@ on:
 
 env:
   # TARGET_DIR: build/
-  TF_ENVIRONMENT: ${{ github.ref == 'refs/heads/dev' && 'dev' || github.ref == 'refs/heads/uat' && 'uat' || github.ref == 'refs/heads/main' && 'prod' ||'unknown' }}
+  TF_ENVIRONMENT: ${{ github.ref == 'refs/heads/dev' && 'dev' || github.ref == 'refs/heads/uat' && 'uat' || github.ref == 'refs/heads/master' && 'prod' ||'unknown' }}
   TF_REGION: eu-west-1
       
 concurrency:
-  group: Ci-${{ github.ref == 'refs/heads/dev' && 'dev' || github.ref == 'refs/heads/uat' && 'uat' || github.ref == 'refs/heads/main' && 'prod' ||'unknown' }}
+  group: Ci-${{ github.ref == 'refs/heads/dev' && 'dev' || github.ref == 'refs/heads/uat' && 'uat' || github.ref == 'refs/heads/master' && 'prod' ||'unknown' }}
   cancel-in-progress: false
 
 permissions:
